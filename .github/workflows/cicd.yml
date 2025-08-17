@@ -27,7 +27,7 @@ jobs:
 
   Deploy:
     runs-on: self-hosted
-
+    needs: Testing
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
