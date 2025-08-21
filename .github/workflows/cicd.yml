@@ -39,8 +39,10 @@ jobs:
 
       - name: Deploy to Server
         run: |
+          ls -a
+          # delete runing instance if it exists
           pm2 delete "Server" || true
-
+          # start pm2 angain 
           pm2 start "npm start" --name="Server"
 
  
