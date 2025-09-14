@@ -7,7 +7,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -15,7 +15,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18' # Change this to your Node.js version
+          node-version: '22' # Change this to your Node.js version
 
       - name: Install dependencies
         run: npm install
